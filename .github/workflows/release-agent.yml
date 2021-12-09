@@ -36,6 +36,6 @@ jobs:
         run: |
           pwd
           mvn -B package -Dmaven.test.skip=true
-          mvn deploy -Pgithub
+          mvn -DuseGitHubPackages=true deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
