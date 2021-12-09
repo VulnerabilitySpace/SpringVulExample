@@ -34,6 +34,7 @@ jobs:
 
       - name: Build with Maven
         run: |
+          pwd
           mvn -B package -Dmaven.test.skip=true
           mvn deploy
         env:
