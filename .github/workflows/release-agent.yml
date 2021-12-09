@@ -1,4 +1,4 @@
-name: Maven Package
+name: Release Spring Vul Example
 
 on:
   release:
@@ -33,6 +33,8 @@ jobs:
           echo ::set-output name=VERSION::${V}
 
       - name: Build with Maven
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mvn -B package -Dmaven.test.skip=true
           mvn deploy
