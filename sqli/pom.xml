@@ -5,11 +5,11 @@
     <parent>
         <artifactId>example</artifactId>
         <groupId>club.owefsad</groupId>
-        <version>0.1.9</version>
+        <version>${project.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sqli</artifactId>
-    
+
 
 </project>
