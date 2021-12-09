@@ -7,7 +7,6 @@
         <groupId>club.owefsad</groupId>
         <version>0.1.9</version>
     </parent>
-    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sqli</artifactId>
@@ -16,26 +15,5 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
-
-<!--    <profiles>-->
-<!--        <profile>-->
-<!--            <id>github</id>-->
-<!--            <activation>-->
-<!--                <property>-->
-<!--                    <name>useGitHubPackages</name>-->
-<!--                    <value>true</value>-->
-<!--                </property>-->
-<!--            </activation>-->
-<!--            <repositories>-->
-<!--                <repository>-->
-<!--                    <id>github</id>-->
-<!--                    <url>https://maven.pkg.github.com/exexute/SpringVulExample</url>-->
-<!--                    <snapshots>-->
-<!--                        <enabled>true</enabled>-->
-<!--                    </snapshots>-->
-<!--                </repository>-->
-<!--            </repositories>-->
-<!--        </profile>-->
-<!--    </profiles>-->
 
 </project>
