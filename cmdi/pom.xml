@@ -7,6 +7,7 @@
         <groupId>club.owefsad</groupId>
         <version>0.1.9</version>
     </parent>
+    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cmdi</artifactId>
