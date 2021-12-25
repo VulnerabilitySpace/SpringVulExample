@@ -36,7 +36,7 @@ jobs:
         run: |
           pwd
           mvn -B package -Dmaven.test.skip=true
-          mvn -q versions:set -DnewVersion="${NEW_VERSION}"
+          mvn -q versions:set -DnewVersion="${{ steps.get_version.outputs.VERSION }}"
           mvn -q versions:update-child-modules
           mvn -q versions:commit
           mvn -B -DuseGitHubPackages=true deploy
