@@ -1,5 +1,6 @@
 package club.owefsad.example;
 
+import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
