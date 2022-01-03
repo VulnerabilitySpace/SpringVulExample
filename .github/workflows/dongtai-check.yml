@@ -29,6 +29,6 @@ jobs:
       
       - name: Run Test
         run: |
-          echo ${{ steps.dongtai.outputs.agent-env }}
-          export JAVA_TOOL_OPTIONS=${{ steps.dongtai.outputs.agent-env }}
+          echo "${{ steps.dongtai.outputs.agent-env }}"
+          export JAVA_TOOL_OPTIONS="${{ steps.dongtai.outputs.agent-env }}"
           java -version
