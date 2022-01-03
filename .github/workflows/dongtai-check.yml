@@ -35,5 +35,4 @@ jobs:
       - name: Run Example
         run: |
           source ~/.bash_profile
-          java -jar target/SpringVulExample.jar
-            
+          mvn test
