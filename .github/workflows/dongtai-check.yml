@@ -31,6 +31,11 @@ jobs:
         uses: exexute/open-agent-action@main
         with:
           project-name: "SpringVulExample"
+      
+      - name: Import DongTai
+        run: |
+          cat ~/.bash_profile
+          source ~/.bash_profile
 
       - name: Show ENV
         run: echo $JAVA_TOOL_OPTIONS  
