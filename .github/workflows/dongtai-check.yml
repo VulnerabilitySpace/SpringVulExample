@@ -24,4 +24,4 @@ jobs:
       - name: Set up DongTai
         uses: exexute/open-agent-action@main
         with:
-          PROJECT_NAME: "SpringVulExample"
+          project-name: "SpringVulExample"
