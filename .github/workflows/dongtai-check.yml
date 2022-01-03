@@ -22,6 +22,13 @@ jobs:
           maven-version: 3.2.5
       
       - name: Set up DongTai
+        id: dongtai
         uses: exexute/open-agent-action@main
         with:
           project-name: "SpringVulExample"
+      
+      - name: Run Test
+        run: |
+          echo ${{ steps.dongtai.outputs.agent-env }}
+          export JAVA_TOOL_OPTIONS=${{ steps.dongtai.outputs.agent-env }}
+          java -version
