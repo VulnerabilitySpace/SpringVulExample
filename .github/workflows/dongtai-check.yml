@@ -36,3 +36,4 @@ jobs:
         run: |
           source ~/.bash_profile
           mvn test
+          sleep 5
