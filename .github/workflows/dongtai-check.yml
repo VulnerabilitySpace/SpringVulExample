@@ -20,20 +20,17 @@ jobs:
         uses: stCarolas/setup-maven@v4
         with:
           maven-version: 3.2.5
+
+      - name: Build with Maven
+        run: |
+          mvn -B package -Dmaven.test.skip=true
+          ls -l
       
       - name: Set up DongTai
         id: dongtai
         uses: exexute/open-agent-action@main
         with:
           project-name: "SpringVulExample"
-      
-      - name: Run Test
-        run: |
-          echo JAVA_TOOL_OPTIONS="\"${{ steps.dongtai.outputs.agent-env }}\"" >> ~/.bash_profile
-          source ~/.bash_profile
-      
-      - name: show profile
-        run: |
-          cat ~/.bash_profile
-          echo $JAVA_TOOL_OPTIONS
 
+      - name: Show ENV
+        run: echo $JAVA_TOOL_OPTIONS  
