@@ -34,6 +34,4 @@ jobs:
       
       - name: Run Example
         run: |
-          source ~/.bash_profile
-          mvn test
-          sleep 5
+          bash ${{ github.workspace }}/.github/scripts/run-example.sh
