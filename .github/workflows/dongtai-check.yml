@@ -29,12 +29,10 @@ jobs:
       
       - name: Run Test
         run: |
-          ls -la ~/
-          cat ~/.bash_profile
           echo JAVA_TOOL_OPTIONS="${{ steps.dongtai.outputs.agent-env }}" >> ~/.bash_profile
-          echo "${{ steps.dongtai.outputs.agent-env }}"
-          export JAVA_TOOL_OPTIONS="${{ steps.dongtai.outputs.agent-env }}"
       
       - name: show profile
-        run: echo $JAVA_TOOL_OPTIONS
+        run: |
+          cat ~/.bash_profile
+          echo $JAVA_TOOL_OPTIONS
 
