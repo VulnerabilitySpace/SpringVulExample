@@ -23,4 +23,4 @@ curl http://localhost:8080/index/name?username=owefsad
 curl http://localhost:8080/index/age?age=100
 curl http://localhost:8080/cmd/runtime?cmd=whoami
 
-sleep 120
+sleep 30
