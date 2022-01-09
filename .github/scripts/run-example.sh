@@ -23,4 +23,10 @@ curl http://localhost:8080/index/name?username=owefsad
 curl http://localhost:8080/index/age?age=100
 curl http://localhost:8080/cmd/runtime?cmd=whoami
 
+echo "run jndi testing"
+curl http://localhost:8080/jndi/log4j2-error?name=%24%7Bjndi%3Aldap%3A%2F%2Fowefsad%7D
+curl http://localhost:8080/jndi/dnsURLContext?name=ldap://localhost:2145
+curl http://localhost:8080/jndi/ReadOnlyContext?name=ldap://localhost:2145
+curl http://localhost:8080/jndi/JdbcRowSetImpl?name=ldap://localhost:2145
+
 sleep 30
