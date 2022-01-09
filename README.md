@@ -6,6 +6,7 @@ SpringVulExample is a SpringBoot web application that is damn vulnerable. Its ma
 
 * JDK 1.8+
 * Maven 3.2+
+* (optinal) git
 
 2. Clone code:
 
