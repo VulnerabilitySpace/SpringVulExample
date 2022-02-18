@@ -7,7 +7,7 @@ echo "waiting for application run"
 check_times=0
 while [ $check_times -lt 30 ];
 do
-	echo 'checking api status'
+	echo 'checking api status...'
 	curl http://localhost:8080/index/name?username=owefsad
 	if [ "$?" == "0" ];then
 		break
@@ -29,4 +29,10 @@ curl http://localhost:8080/jndi/dnsURLContext?name=ldap://localhost:2145
 curl http://localhost:8080/jndi/ReadOnlyContext?name=ldap://localhost:2145
 curl http://localhost:8080/jndi/JdbcRowSetImpl?name=ldap://localhost:2145
 
-sleep 30
+if [ "$?" == "0" ];then
+		echo "test finished. wait for upload report"
+		sleep 30
+else
+  echo "api status is down"
+fi
+

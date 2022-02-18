@@ -2,6 +2,9 @@ name: DongTai check for vul-scan
 
 on:
   push:
+    paths-ignore:
+      - '**.yml'
+      - '**.md'
 
 jobs:
   build:

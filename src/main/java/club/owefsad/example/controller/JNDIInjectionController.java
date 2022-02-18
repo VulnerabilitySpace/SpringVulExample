@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.Hashtable;
 import javax.naming.NamingException;
 import org.apache.activemq.artemis.jndi.ReadOnlyContext;
+import org.apache.camel.util.jndi.JndiContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -70,5 +71,17 @@ public class JNDIInjectionController {
         impl.setDataSourceName(name);
         impl.setAutoCommit(true);
         return "JdbcRowSetImpl init for: " + name;
+    }
+
+    /**
+     * @param name ldap://localhost:2145
+     * @return
+     * @throws Exception
+     */
+    @GetMapping("camelJndiContext")
+    public String CamelJndiContext(String name) throws Exception {
+        org.apache.camel.util.jndi.JndiContext context = new JndiContext();
+        context.lookup(name);
+        return "org.apache.camel.util.jndi.JndiContext lookup for: " + name;
     }
 }
